@@ -43,21 +43,21 @@ Un système de minage automatisé complet utilisant des turtles et un serveur ce
 
 1. **Serveur Central** ('minerServer.lua')
 
-'''
+```
 bash
 # Placer sur un ordinateur avec modem
 pastebin get 8iz2scyW minerServer.lua
 minerServer
-'''
+```
 
 2. **Turtles de Minage** ('turtleMiner.lua')
 
-'''
+```
 bash
 # Placer sur chaque turtle avec modem
 pastebin get wyFw9uA2 turtleMiner.lua
 turtleMiner
-'''
+```
 
 ## 📖 Utilisation
 
@@ -100,7 +100,7 @@ turtleMiner
 
 Chaque turtle peut être configurée individuellement avec 10 profils sauvegardés :
 
-'''
+```
 lua
 -- Exemple de configuration
 local config = {
@@ -109,7 +109,7 @@ local config = {
     zLength = 5,      -- Longueur/tunnels
     useLadder = true  -- Utilisation d'échelles
 }
-'''
+```
 
 ## 📊 Protocole de Communication
 
@@ -117,14 +117,14 @@ local config = {
 
 #### Enregistrement
 
-'''
+```
 lua
 { type = 'register', turtleId = 123 }
-'''
+```
 
 #### Statut
 
-'''
+```
 lua
 {
     type = 'status',
@@ -136,11 +136,11 @@ lua
         x = 10, y = 64, z = -20
     }
 }
-'''
+```
 
 #### Commandes
 
-'''
+```
 lua
 -- Démarrer avec configuration
 { type = 'start', xWidth = 10, yHeight = 3, zLength = 5, useLadder = true }
@@ -156,11 +156,11 @@ lua
 
 -- Confirmation d'enregistrement
 { type = 'registered' }
-'''
+```
 
 ## 🏗️ Architecture
 
-'''
+```
 ┌─────────────────┐    Rednet    ┌─────────────────┐
 │   Serveur       │◄─────────────│   Turtle #1     │
 │   Central       │              │                 │
@@ -172,7 +172,7 @@ lua
                                  │                 │
                                  │   Minage Zone   │
                                  └─────────────────┘
-'''
+```
 
 ## 🔧 Personnalisation
 
@@ -180,7 +180,7 @@ lua
 
 Éditez 'configs' dans 'minerServer.lua' :
 
-'''
+```
 lua
 local configs = {}
 for i = 1, 10 do
@@ -192,13 +192,13 @@ for i = 1, 10 do
         name = "Config " .. i -- Nom de la configuration
     }
 end
-'''
+```
 
 ### Ajouter de Nouvelles Commandes
 
 Dans 'turtleMiner.lua' :
 
-'''
+```
 lua
 local function handleCommand(message)
     -- Commandes existantes...
@@ -210,19 +210,19 @@ local function handleCommand(message)
         end
     end
 end
-'''
+```
 
 ### Personnaliser l'Interface
 
 Modifiez les fonctions d'affichage dans 'minerServer.lua' :
 
-'''
+```
 lua
 local function drawHeader()
     -- Personnaliser l'en-tête
     centerText("=== MON SYSTÈME DE MINAGE ===", 1, width)
 end
-'''
+```
 
 ## 🐛 Dépannage
 
@@ -251,7 +251,7 @@ end
 
 Activez les messages de debug dans le code :
 
-'''
+```
 lua
 local DEBUG = true
 
@@ -263,7 +263,7 @@ end
 
 -- Utilisation
 debugLog('Turtle ' .. id .. ' enregistrée')
-'''
+```
 
 ## 📈 Performances
 

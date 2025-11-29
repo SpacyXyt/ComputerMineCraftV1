@@ -1,12 +1,12 @@
 # 🐢 Système de Minage Automatisé - ComputerCraft
 
-[![ComputerCraft](https://img.shields.io/badge/ComputerCraft-1.113.1-orange.svg)](https://www.computercraft.info/)
+[![ComputerCraft](https://img.shields.io/badge/ComputerCraft-1.113.1-orange.svg)](https://tweaked.cc/)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-green.svg)](https://minecraft.net/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Un système de minage automatisé complet utilisant des turtles et un serveur central pour Minecraft avec le mod ComputerCraft.
 
-![Interface Serveur](https://via.placeholder.com/800x400.png?text=Interface+Serveur+de+Contrôle)
+![Interface Serveur](https://raw.githubusercontent.com/SpacyXyt/ComputerMineCraftV1/refs/heads/Release/server-interface.png)
 
 ## ✨ Fonctionnalités
 

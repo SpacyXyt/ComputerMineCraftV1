@@ -46,21 +46,21 @@ Un système de minage automatisé complet utilisant des turtles et un serveur ce
 
 1. **Serveur Central** ('minerServer.lua')
 
-'''
+```
 bash
 # Placer sur un ordinateur avec modem
 pastebin get 8iz2scyW minerServer.lua
 minerServer
-'''
+```
 
 2. **Turtles de Minage** ('turtleMiner.lua')
 
-'''
+```
 bash
 # Placer sur chaque turtle avec modem
 pastebin get wyFw9uA2 turtleMiner.lua
 turtleMiner
-'''
+```
 
 ## 📖 Utilisation
 
@@ -106,7 +106,7 @@ turtleMiner
 
 Chaque turtle peut être configurée individuellement avec 10 profils sauvegardés :
 
-'''
+```
 lua
 -- Exemple de configuration complète
 local config = {
@@ -120,7 +120,7 @@ local config = {
         down = true       -- Minage vers le bas
     }
 }
-'''
+```
 
 ## 📊 Protocole de Communication
 
@@ -128,14 +128,14 @@ local config = {
 
 #### Enregistrement
 
-'''
+```
 lua
 { type = 'register', turtleId = 123 }
-'''
+```
 
 #### Statut
 
-'''
+```
 lua
 {
     type = 'status',
@@ -147,11 +147,11 @@ lua
         x = 10, y = 64, z = -20
     }
 }
-'''
+```
 
 #### Commandes
 
-'''
+```
 lua
 -- Démarrer avec configuration complète
 { 
@@ -178,11 +178,11 @@ lua
 
 -- Confirmation d'enregistrement
 { type = 'registered' }
-'''
+```
 
 ## 🏗️ Architecture
 
-'''
+```
 ┌─────────────────┐    Rednet    ┌─────────────────┐
 │   Serveur       │◄─────────────│   Turtle #1     │
 │   Central       │              │                 │
@@ -196,7 +196,7 @@ lua
                                  │   Minage Zone   │
                                  │ Direction: ↓←↑  │
                                  └─────────────────┘
-'''
+```
 
 ## 🔧 Personnalisation
 
@@ -204,7 +204,7 @@ lua
 
 Éditez 'configs' dans 'minerServer.lua' :
 
-'''
+```
 lua
 local configs = {}
 for i = 1, 10 do
@@ -221,13 +221,13 @@ for i = 1, 10 do
         name = "Config " .. i -- Nom de la configuration
     }
 end
-'''
+```
 
 ### Personnaliser les Comportements de Minage
 
 Dans 'turtleMiner.lua', adaptez la logique de minage :
 
-'''
+```
 lua
 -- Exemple de minage conditionnel selon la direction
 local function mineAccordingToDirection()
@@ -250,13 +250,13 @@ local function mineAccordingToDirection()
         mineDown()
     end
 end
-'''
+```
 
 ### Ajouter de Nouvelles Commandes
 
 Dans 'turtleMiner.lua' :
 
-'''
+```
 lua
 local function handleCommand(message)
     -- Commandes existantes...
@@ -273,7 +273,7 @@ local function handleCommand(message)
         end
     end
 end
-'''
+```
 
 ## 🐛 Dépannage
 
@@ -307,7 +307,7 @@ end
 
 Activez les messages de debug dans le code :
 
-'''
+```
 lua
 local DEBUG = true
 
@@ -320,7 +320,7 @@ end
 -- Utilisation
 debugLog('Turtle ' .. id .. ' enregistrée')
 debugLog('Direction configurée: ' .. getDirectionText(config.mineDirection))
-'''
+```
 
 ## 📈 Performances
 

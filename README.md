@@ -46,8 +46,7 @@ Un système de minage automatisé complet utilisant des turtles et un serveur ce
 
 1. **Serveur Central** ('minerServer.lua')
 
-```
-bash
+```bash
 # Placer sur un ordinateur avec modem
 pastebin get 8iz2scyW minerServer.lua
 minerServer
@@ -55,8 +54,7 @@ minerServer
 
 2. **Turtles de Minage** ('turtleMiner.lua')
 
-```
-bash
+```bash
 # Placer sur chaque turtle avec modem
 pastebin get wyFw9uA2 turtleMiner.lua
 turtleMiner
@@ -106,8 +104,7 @@ turtleMiner
 
 Chaque turtle peut être configurée individuellement avec 10 profils sauvegardés :
 
-```
-lua
+```lua
 -- Exemple de configuration complète
 local config = {
     xWidth = 10,      -- Largeur du minage
@@ -128,15 +125,13 @@ local config = {
 
 #### Enregistrement
 
-```
-lua
+```lua
 { type = 'register', turtleId = 123 }
 ```
 
 #### Statut
 
-```
-lua
+```lua
 {
     type = 'status',
     turtleId = 123,
@@ -151,8 +146,7 @@ lua
 
 #### Commandes
 
-```
-lua
+```lua
 -- Démarrer avec configuration complète
 { 
     type = 'start', 
@@ -204,8 +198,7 @@ lua
 
 Éditez 'configs' dans 'minerServer.lua' :
 
-```
-lua
+```lua
 local configs = {}
 for i = 1, 10 do
     configs[i] = {
@@ -227,8 +220,7 @@ end
 
 Dans 'turtleMiner.lua', adaptez la logique de minage :
 
-```
-lua
+```lua
 -- Exemple de minage conditionnel selon la direction
 local function mineAccordingToDirection()
     if config.mineDirection.forward then
@@ -256,8 +248,7 @@ end
 
 Dans 'turtleMiner.lua' :
 
-```
-lua
+```lua
 local function handleCommand(message)
     -- Commandes existantes...
     
@@ -307,8 +298,7 @@ end
 
 Activez les messages de debug dans le code :
 
-```
-lua
+```lua
 local DEBUG = true
 
 local function debugLog(message)
